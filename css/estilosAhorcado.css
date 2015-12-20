@@ -1,0 +1,85 @@
+@charset "UTF-8";
+body{
+    font-family:"Helvetica", Arial, sans-serif;
+}
+.ahorcado, .alfabeto{
+    text-align: center;
+    margin: 1em 0;
+}
+.ord{
+    font-family: "Courier New", Courier, monospace;
+    color: black;
+}
+.activa .ord{
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.palabras{
+	text-align: center;
+}
+.palabras > .enunciado{
+    display: none;
+}
+.palabras > .enunciado.activa{
+    display: block;
+    color: black;
+}
+.palabras > .enunciado.inactiva{
+    display: block;
+    color: #aeaeae;
+}
+
+
+
+/* Estilo retro pop up */
+.dialog-background{
+    background: none repeat scroll 0 0 rgba(0, 0, 25, 0.5);
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.dialog-loading-wrapper {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    left: 20%;
+    right: 20%;
+    position: fixed;
+    top: 20%;
+    z-index: 101;
+}
+.dialog-loading-icon {
+    background-color: #FFFFFF !important;
+    border-radius: 13px;
+    display: block;
+    margin: 0;
+    padding: 1em;
+    text-align: right;
+}
+img#botonCerrarRetro{
+    /*float: right;*/
+    cursor: pointer;
+}
+img#botonCerrarRetro:hover{
+    opacity: 0.5;
+    color: #000;
+}
+img#botonCerrarRetro:hover:after {
+    content: "Cerrar";
+}
+#retroFinalMensaje{
+    min-height: 2em;
+    text-align: center;
+}
+#retroFinalMensaje div.bien, #retroFinalMensaje div.mal{
+    float: left;
+    height: 16px;
+}
+#retroFinalMensaje, div#conclusion{
+    text-align: center;
+}
+/* FIN Estilo retro pop up */
